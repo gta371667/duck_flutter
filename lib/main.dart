@@ -1,3 +1,4 @@
+import 'package:duck_flutter/LaunchActivity.dart';
 import 'package:duck_flutter/MainActivity.dart';
 import 'package:duck_flutter/a_test/TestActivity.dart';
 import 'package:flutter/material.dart';
@@ -12,8 +13,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green, //整體主題顏色
       ),
-//      home: MainActivity(),
-      home: TestActivity(),
+//      home: MainActivity()
+//      home: TestActivity(),
+      home: LaunchActivity(),
       routes: <String, WidgetBuilder>{
         '/a': (BuildContext context) => new TestActivity(),
         '/c': (BuildContext context) => new MainActivity(),

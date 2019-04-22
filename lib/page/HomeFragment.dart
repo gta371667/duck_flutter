@@ -57,7 +57,7 @@ class HomeState extends State<HomeFragment> {
       body: new Column(
         children: <Widget>[
           Image.asset(
-            "assets/ic_slider.png",
+            "assets/images/ic_slider.png",
           ),
 //          iconView(),
           testIcon(),
@@ -82,7 +82,7 @@ class HomeState extends State<HomeFragment> {
         new Container(
           child: new IconButton(
               icon: Image.asset(
-                'assets/ic_bar.png',
+                'assets/images/ic_bar.png',
               ),
               disabledColor: Colors.red,
               highlightColor: Colors.blue,
@@ -120,7 +120,7 @@ class HomeState extends State<HomeFragment> {
             flex: 1,
             child: IconRippleView(
               new Image.asset(
-                "assets/ic_home2.png",
+                "assets/images/ic_home2.png",
               ),
               radius: 5,
             ),
@@ -131,7 +131,7 @@ class HomeState extends State<HomeFragment> {
                 margin: EdgeInsets.all(5),
                 child: new Stack(children: <Widget>[
                   new Image.asset(
-                    "assets/ic_home2.png",
+                    "assets/images/ic_home2.png",
                   ),
                   new Positioned.fill(
                       child: new FlatButton(
@@ -147,14 +147,14 @@ class HomeState extends State<HomeFragment> {
             flex: 1,
             child: new Container(
               margin: EdgeInsets.all(5),
-              child: Image.asset("assets/ic_home3.png"),
+              child: Image.asset("assets/images/ic_home3.png"),
             ),
           ),
           Expanded(
             flex: 1,
             child: new Container(
               margin: EdgeInsets.all(5),
-              child: Image.asset("assets/ic_home4.png"),
+              child: Image.asset("assets/images/ic_home4.png"),
             ),
           ),
         ],
@@ -206,10 +206,10 @@ class HomeState extends State<HomeFragment> {
 
   testIcon() {
     List<IconModel> _iconArray = new List();
-    _iconArray.add(new IconModel(IconType.Home, "Sub1", "assets/ic_home1.png"));
-    _iconArray.add(new IconModel(IconType.Home, "Sub2", "assets/ic_home2.png"));
-    _iconArray.add(new IconModel(IconType.Home, "Sub3", "assets/ic_home3.png"));
-    _iconArray.add(new IconModel(IconType.Home, "Sub4", "assets/ic_home4.png"));
+    _iconArray.add(new IconModel(IconType.Home, "Sub1", "assets/images/ic_home1.png"));
+    _iconArray.add(new IconModel(IconType.Home, "Sub2", "assets/images/ic_home2.png"));
+    _iconArray.add(new IconModel(IconType.Home, "Sub3", "assets/images/ic_home3.png"));
+    _iconArray.add(new IconModel(IconType.Home, "Sub4", "assets/images/ic_home4.png"));
 
     return Container(
       margin: EdgeInsets.only(left: 5, right: 10),

@@ -55,7 +55,7 @@ class _NewsFragmentState extends BaseState<NewsFragment> {
 ////      ),
 //      appBar: BaseAppBar(
 //        text: "asdasd",
-//        leftIcon: "assets/ic_home1.png",
+//        leftIcon: "assets/images/ic_home1.png",
 //      ),
 //      backgroundColor: Colors.red,
 //      body: Center(
@@ -63,7 +63,7 @@ class _NewsFragmentState extends BaseState<NewsFragment> {
 //          mainAxisAlignment: MainAxisAlignment.center,
 //          children: <Widget>[
 //            new Image.asset(
-//              "assets/ic_home2.png",
+//              "assets/images/ic_home2.png",
 //              height: 60,
 //            ),
 //            MaterialButton(
@@ -86,7 +86,7 @@ class _NewsFragmentState extends BaseState<NewsFragment> {
 //            ),
 //            new Row(
 //              children: <Widget>[
-//                new Image.asset('assets/flutter-mark-square-64.png',
+//                new Image.asset('assets/images/flutter-mark-square-64.png',
 //                    scale: 1.5),
 //                const Text(
 //                  'Flutter',
@@ -134,13 +134,13 @@ Widget showCustomScrollView() {
           centerTitle: true,
           background: new Container(
             child: Image.asset(
-              "assets/ic_slider.png",
+              "assets/images/ic_slider.png",
             ),
           ),
         ),
         leading: new IconButton(
             icon: Image.asset(
-              "assets/ic_arrow_back.png",
+              "assets/images/ic_arrow_back.png",
               color: Colors.white,
               height: 20,
               width: 20,
@@ -157,7 +157,7 @@ Widget showCustomScrollView() {
           new Container(
             child: new IconButton(
                 icon: Image.asset(
-                  'assets/ic_bar.png',
+                  'assets/images/ic_bar.png',
                 ),
                 disabledColor: Colors.red,
                 highlightColor: Colors.blue,
@@ -171,7 +171,7 @@ Widget showCustomScrollView() {
           new Container(
             child: new IconButton(
                 icon: Image.asset(
-                  'assets/ic_home2.png',
+                  'assets/images/ic_home2.png',
                 ),
                 disabledColor: Colors.red,
                 highlightColor: Colors.blue,
@@ -185,7 +185,7 @@ Widget showCustomScrollView() {
           new Container(
             child: new IconButton(
                 icon: Image.asset(
-                  'assets/ic_home1.png',
+                  'assets/images/ic_home1.png',
                 ),
                 disabledColor: Colors.red,
                 highlightColor: Colors.blue,

@@ -41,20 +41,20 @@ class _MainActivityState extends State<MainActivity> implements DrawerOnClick {
 
     drawerModel.clear();
 
-    drawerModel.add(DrawerModel(
-        0, "首頁", 'assets/ic_menu_home_c.png', 'assets/ic_menu_home.png', true));
-    drawerModel.add(DrawerModel(0, "新聞", 'assets/ic_menu_news_c.png',
-        'assets/ic_menu_news.png', false));
-    drawerModel.add(DrawerModel(0, "行情", 'assets/ic_menu_info_c.png',
-        'assets/ic_menu_info.png', false));
-    drawerModel.add(DrawerModel(
-        0, "貼吧", 'assets/ic_menu_bar_c.png', 'assets/ic_menu_bar.png', false));
-    drawerModel.add(DrawerModel(0, "設定", 'assets/ic_menu_setting_c.png',
-        'assets/ic_menu_setting.png', false));
-    drawerModel.add(DrawerModel(0, "連結", 'assets/ic_menu_link_c.png',
-        'assets/ic_menu_link.png', false));
-    drawerModel.add(DrawerModel(0, "掃描", 'assets/ic_menu_qrcode_c.png',
-        'assets/ic_menu_qrcode.png', false));
+    drawerModel.add(DrawerModel(0, "首頁", 'assets/images/ic_menu_home_c.png',
+        'assets/images/ic_menu_home.png', true));
+    drawerModel.add(DrawerModel(0, "新聞", 'assets/images/ic_menu_news_c.png',
+        'assets/images/ic_menu_news.png', false));
+    drawerModel.add(DrawerModel(0, "行情", 'assets/images/ic_menu_info_c.png',
+        'assets/images/ic_menu_info.png', false));
+    drawerModel.add(DrawerModel(0, "貼吧", 'assets/images/ic_menu_bar_c.png',
+        'assets/images/ic_menu_bar.png', false));
+    drawerModel.add(DrawerModel(0, "設定", 'assets/images/ic_menu_setting_c.png',
+        'assets/images/ic_menu_setting.png', false));
+    drawerModel.add(DrawerModel(0, "連結", 'assets/images/ic_menu_link_c.png',
+        'assets/images/ic_menu_link.png', false));
+    drawerModel.add(DrawerModel(0, "掃描", 'assets/images/ic_menu_qrcode_c.png',
+        'assets/images/ic_menu_qrcode.png', false));
   }
 
   @override
@@ -75,13 +75,13 @@ class _MainActivityState extends State<MainActivity> implements DrawerOnClick {
         items: [
           BottomNavigationBarItem(
               icon: Image.asset(
-                "assets/flutter-mark-square-64.png",
+                "assets/images/flutter-mark-square-64.png",
                 color: Colors.black,
                 height: 25,
                 width: 25,
               ),
               activeIcon: Image.asset(
-                "assets/flutter-mark-square-64.png",
+                "assets/images/flutter-mark-square-64.png",
                 height: 25,
                 width: 25,
                 color: Colors.red,
@@ -171,7 +171,7 @@ class _MainActivityState extends State<MainActivity> implements DrawerOnClick {
             alignment: Alignment.centerRight, //對齊
             margin: EdgeInsets.all(20),
             child: Image.asset(
-              "assets/ic_close_menu.png",
+              "assets/images/ic_close_menu.png",
               width: 30,
               height: 30,
             ),

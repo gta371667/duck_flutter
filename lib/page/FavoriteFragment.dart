@@ -9,10 +9,10 @@ import 'package:duck_flutter/widget/TestView.dart';
 class FavoriteFragment extends StatelessWidget {
   List<IconModel> getArray() {
     List<IconModel> _iconArray = new List();
-    _iconArray.add(new IconModel(IconType.Home, "Sub1", "assets/ic_home1.png"));
-    _iconArray.add(new IconModel(IconType.Home, "Sub2", "assets/ic_home2.png"));
-    _iconArray.add(new IconModel(IconType.Home, "Sub3", "assets/ic_home3.png"));
-    _iconArray.add(new IconModel(IconType.Home, "Sub4", "assets/ic_home4.png"));
+    _iconArray.add(new IconModel(IconType.Home, "Sub1", "assets/images/ic_home1.png"));
+    _iconArray.add(new IconModel(IconType.Home, "Sub2", "assets/images/ic_home2.png"));
+    _iconArray.add(new IconModel(IconType.Home, "Sub3", "assets/images/ic_home3.png"));
+    _iconArray.add(new IconModel(IconType.Home, "Sub4", "assets/images/ic_home4.png"));
     return _iconArray;
   }
 
@@ -41,7 +41,7 @@ class FavoriteFragment extends StatelessWidget {
                       color: Colors.deepPurpleAccent,
                       height: 60,
                       child: IconRippleView(
-                          new Image.asset('assets/ic_home1.png'))),
+                          new Image.asset('assets/images/ic_home1.png'))),
                   new Container(
                     alignment: Alignment.centerRight, //對齊
                     child: MyAttrView(

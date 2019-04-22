@@ -9,4 +9,3 @@ library xview;
 /// https://github.com/gta371667/Xview_flutter
 
 export 'tools/ToolsPhonePixel.dart';
-export 'tools/aaa666.dart';

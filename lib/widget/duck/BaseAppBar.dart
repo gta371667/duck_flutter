@@ -4,7 +4,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
 class BaseAppBar extends AppBar {
-  static const defaultImg = "assets/ic_arrow_back.png";
+  static const defaultImg = "assets/images/ic_arrow_back.png";
 
   final BuildContext context;
 

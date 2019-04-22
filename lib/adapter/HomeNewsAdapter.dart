@@ -40,7 +40,7 @@ class HomeNewsAdapter extends StatelessWidget {
             child: new Directionality(
               textDirection: TextDirection.rtl,
               child: Image.asset(
-                'assets/ic_arrow_back.png',
+                'assets/images/ic_arrow_back.png',
                 width: 15,
                 matchTextDirection: true,
                 height: 15,

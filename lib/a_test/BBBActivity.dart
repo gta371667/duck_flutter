@@ -32,7 +32,7 @@ class TestActivityState extends BaseState<BBBActivity> {
           margin: EdgeInsets.fromLTRB(0, 0, 5, 0),
           child: new IconButton(
               icon: Image.asset(
-                'assets/ic_bar.png',
+                'assets/images/ic_bar.png',
               ),
               disabledColor: Colors.red,
               highlightColor: Colors.blue,
