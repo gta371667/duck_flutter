@@ -104,6 +104,28 @@ class TestActivityState extends BaseState<TestActivity> {
                     ),
                   ),
                 ),
+                Positioned(
+                  top: 10,
+                  right: 100,
+                  left: 100,
+                  bottom: 500,
+                  child: MyMaterialView(
+                    backgroundColor: Colors.amber,
+                    radiusAll: 30,
+                    padding: 10,
+                    onTap: () {
+//                      Navigator.pushNamed(context, '/c');
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: Text(
+                        "測試theme",
+                        style: Theme.of(context).textTheme.body1,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

@@ -1,5 +1,5 @@
 import 'package:duck_flutter/MainActivity.dart';
-import 'package:duck_flutter/a_test/TestActivity.dart';
+import 'package:duck_flutter/TestActivity.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -41,6 +41,7 @@ class _LaunchActivityState extends State<LaunchActivity> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.deepOrangeAccent,
       child: Image.asset('assets/images/gbf_bi.jpg'),
     );
   }
