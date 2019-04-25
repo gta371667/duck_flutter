@@ -1,8 +1,9 @@
 import 'package:duck_flutter/widget/MyMaterialView.dart';
 import 'package:duck_flutter/widget/base/BaseState.dart';
 import 'package:duck_flutter/widget/base/BaseStatefulWidget.dart';
-import 'package:duck_flutter/widget/duck/BaseAppBar.dart';
+import 'package:duck_flutter/widget/BaseAppBar.dart';
 import 'package:flutter/material.dart';
+import 'package:xview/widget/ImageRippleView.dart';
 
 class TestActivity extends BaseStatefulWidget {
   @override
@@ -125,6 +126,10 @@ class TestActivityState extends BaseState<TestActivity> {
                       ),
                     ),
                   ),
+                ),
+                ImageRippleView(
+                  image: new Image.asset("assets/images/ic_slider.png"),
+                  radius: 600,
                 ),
               ],
             ),

@@ -3,9 +3,9 @@ import 'package:duck_flutter/adapter/IconAdapter.dart';
 import 'package:duck_flutter/httpAPI.dart';
 import 'package:duck_flutter/model/IconModel.dart';
 import 'package:duck_flutter/model/NewsModel.dart';
-import 'package:duck_flutter/widget/IconRippleView.dart';
+import 'package:xview/widget/ImageRippleView.dart';
 import 'package:duck_flutter/widget/base/BaseStatefulWidget.dart';
-import 'package:duck_flutter/widget/duck/BaseAppBar.dart';
+import 'package:duck_flutter/widget/BaseAppBar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -118,8 +118,8 @@ class HomeState extends State<HomeFragment> {
         children: <Widget>[
           Expanded(
             flex: 1,
-            child: IconRippleView(
-              new Image.asset(
+            child: ImageRippleView(
+              image: new Image.asset(
                 "assets/images/ic_home2.png",
               ),
               radius: 5,
@@ -206,10 +206,14 @@ class HomeState extends State<HomeFragment> {
 
   testIcon() {
     List<IconModel> _iconArray = new List();
-    _iconArray.add(new IconModel(IconType.Home, "Sub1", "assets/images/ic_home1.png"));
-    _iconArray.add(new IconModel(IconType.Home, "Sub2", "assets/images/ic_home2.png"));
-    _iconArray.add(new IconModel(IconType.Home, "Sub3", "assets/images/ic_home3.png"));
-    _iconArray.add(new IconModel(IconType.Home, "Sub4", "assets/images/ic_home4.png"));
+    _iconArray.add(
+        new IconModel(IconType.Home, "Sub1", "assets/images/ic_home1.png"));
+    _iconArray.add(
+        new IconModel(IconType.Home, "Sub2", "assets/images/ic_home2.png"));
+    _iconArray.add(
+        new IconModel(IconType.Home, "Sub3", "assets/images/ic_home3.png"));
+    _iconArray.add(
+        new IconModel(IconType.Home, "Sub4", "assets/images/ic_home4.png"));
 
     return Container(
       margin: EdgeInsets.only(left: 5, right: 10),

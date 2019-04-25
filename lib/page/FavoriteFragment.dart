@@ -1,18 +1,22 @@
-import 'package:flutter/material.dart';
 import 'package:duck_flutter/adapter/IconAdapter.dart';
 import 'package:duck_flutter/model/IconModel.dart';
-import 'package:duck_flutter/widget/IconRippleView.dart';
 import 'package:duck_flutter/widget/MyAttrView.dart';
 import 'package:duck_flutter/widget/MyMaterialView.dart';
 import 'package:duck_flutter/widget/TestView.dart';
+import 'package:flutter/material.dart';
+import 'package:xview/widget/ImageRippleView.dart';
 
 class FavoriteFragment extends StatelessWidget {
   List<IconModel> getArray() {
     List<IconModel> _iconArray = new List();
-    _iconArray.add(new IconModel(IconType.Home, "Sub1", "assets/images/ic_home1.png"));
-    _iconArray.add(new IconModel(IconType.Home, "Sub2", "assets/images/ic_home2.png"));
-    _iconArray.add(new IconModel(IconType.Home, "Sub3", "assets/images/ic_home3.png"));
-    _iconArray.add(new IconModel(IconType.Home, "Sub4", "assets/images/ic_home4.png"));
+    _iconArray.add(
+        new IconModel(IconType.Home, "Sub1", "assets/images/ic_home1.png"));
+    _iconArray.add(
+        new IconModel(IconType.Home, "Sub2", "assets/images/ic_home2.png"));
+    _iconArray.add(
+        new IconModel(IconType.Home, "Sub3", "assets/images/ic_home3.png"));
+    _iconArray.add(
+        new IconModel(IconType.Home, "Sub4", "assets/images/ic_home4.png"));
     return _iconArray;
   }
 
@@ -40,8 +44,9 @@ class FavoriteFragment extends StatelessWidget {
                   Container(
                       color: Colors.deepPurpleAccent,
                       height: 60,
-                      child: IconRippleView(
-                          new Image.asset('assets/images/ic_home1.png'))),
+                      child: ImageRippleView(
+                          image:
+                              new Image.asset('assets/images/ic_home1.png'))),
                   new Container(
                     alignment: Alignment.centerRight, //對齊
                     child: MyAttrView(

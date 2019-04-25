@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:duck_flutter/widget/base/BaseState.dart';
 import 'package:duck_flutter/widget/base/BaseStatefulWidget.dart';
-import 'package:duck_flutter/widget/duck/BaseAppBar.dart';
+import 'package:duck_flutter/widget/BaseAppBar.dart';
 
 class BBBActivity extends BaseStatefulWidget {
 

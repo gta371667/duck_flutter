@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:duck_flutter/model/IconModel.dart';
-import 'package:duck_flutter/widget/IconRippleView2.dart';
+import 'package:flutter/material.dart';
+import 'package:xview/widget/ImageRippleView.dart';
 
 class IconAdapter extends StatelessWidget {
   IconAdapter(this.position, this.data);
@@ -10,12 +10,13 @@ class IconAdapter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IconRippleView2(
-      image: new Image.asset(data.drawableRes),
-      marginTop: 5,
-      marginBottom: 5,
-      marginLeft: 5,
-      radius: 5,
+    return Container(
+      margin: EdgeInsets.all(5),
+      alignment: Alignment.center,
+      child: ImageRippleView(
+        showRipple: true,
+        image: new Image.asset(data.drawableRes),
+      ),
     );
   }
 }
