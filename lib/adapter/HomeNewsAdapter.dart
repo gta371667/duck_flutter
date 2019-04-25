@@ -11,7 +11,7 @@ class HomeNewsAdapter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyMaterialView(
-      onTap: () {},
+      onPressed: () {},
       child: Row(
         children: <Widget>[
           Expanded(

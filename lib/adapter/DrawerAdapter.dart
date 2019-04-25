@@ -17,7 +17,7 @@ class DrawerAdapter extends StatelessWidget {
       backgroundColor: data.isSelect
           ? Color(ColorRes.bottom_bg_click)
           : Color(ColorRes.bottom_bg_default),
-      onTap: () {
+      onPressed: () {
         drawerOnClick.onDrawerOnClick(position, data);
       },
       paddingTop: 15,

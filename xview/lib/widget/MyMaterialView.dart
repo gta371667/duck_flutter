@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 ///包含margin、padding、點擊事件、水波紋、圓角、外框線
 class MyMaterialView extends StatelessWidget {
   final Color backgroundColor; //背景色
-  final GestureTapCallback onTap; //點擊事件
+  final GestureTapCallback onPressed; //點擊事件
   final Widget child;
 
   final double margin; //父margin
@@ -21,7 +21,7 @@ class MyMaterialView extends StatelessWidget {
   final double borderWidth;
   final Color borderColor;
 
-  final double radiusAll; //外框圓角
+  final double radius; //外框圓角
   final double radiusTopLeft;
   final double radiusTopRight;
   final double radiusBottomLeft;
@@ -35,7 +35,7 @@ class MyMaterialView extends StatelessWidget {
   const MyMaterialView({
     Key key,
     this.backgroundColor = Colors.transparent,
-    this.onTap,
+    this.onPressed,
     this.margin = 0,
     this.marginLeft = 0,
     this.marginTop = 0,
@@ -48,7 +48,7 @@ class MyMaterialView extends StatelessWidget {
     this.paddingBottom = 0,
     this.borderWidth = 0,
     this.borderColor = Colors.black,
-    this.radiusAll = 0,
+    this.radius = 0,
     this.radiusTopLeft = 0,
     this.radiusTopRight = 0,
     this.radiusBottomLeft = 0,
@@ -73,7 +73,7 @@ class MyMaterialView extends StatelessWidget {
           child: InkWell(
             highlightColor: highlightColor,
             splashColor: splashColor,
-            onTap: onTap,
+            onTap: onPressed,
             customBorder: _setShape(),
             child: Container(
               padding: _setChildPadding(),
@@ -90,8 +90,8 @@ class MyMaterialView extends StatelessWidget {
   }
 
   _setBorderRadius() {
-    return radiusAll != 0
-        ? BorderRadius.circular(radiusAll)
+    return radius != 0
+        ? BorderRadius.circular(radius)
         : BorderRadius.only(
         topLeft: Radius.circular(radiusTopLeft),
         topRight: Radius.circular(radiusTopRight),

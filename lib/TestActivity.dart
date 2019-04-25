@@ -91,9 +91,9 @@ class TestActivityState extends BaseState<TestActivity> {
                   bottom: 20,
                   child: MyMaterialView(
                     backgroundColor: Colors.red,
-                    radiusAll: 30,
+                    radius: 30,
                     padding: 10,
-                    onTap: () {
+                    onPressed: () {
                       Navigator.pushNamed(context, '/c');
                     },
                     child: Container(
@@ -112,9 +112,9 @@ class TestActivityState extends BaseState<TestActivity> {
                   bottom: 500,
                   child: MyMaterialView(
                     backgroundColor: Colors.amber,
-                    radiusAll: 30,
+                    radius: 30,
                     padding: 10,
-                    onTap: () {
+                    onPressed: () {
 //                      Navigator.pushNamed(context, '/c');
                     },
                     child: Container(

@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 
 class ImageRippleView extends StatelessWidget {
   final Image image;
+  final VoidCallback onPressed;
 
   final double radius;
-  final double radiusTR;
-  final double radiusTL;
-  final double radiusBR;
-  final double radiusBL;
+  final double radiusTopRight;
+  final double radiusTopLeft;
+  final double radiusBottomRight;
+  final double radiusBottomLeft;
 
   final bool showRipple;
 
@@ -15,11 +16,12 @@ class ImageRippleView extends StatelessWidget {
     Key key,
     @required this.image,
     this.radius = 0,
-    this.radiusTR = 0,
-    this.radiusTL = 0,
-    this.radiusBR = 0,
-    this.radiusBL = 0,
+    this.radiusTopRight = 0,
+    this.radiusTopLeft = 0,
+    this.radiusBottomRight = 0,
+    this.radiusBottomLeft = 0,
     this.showRipple = true,
+    this.onPressed,
   })  : assert(image != null),
         super(key: key);
 
@@ -33,7 +35,9 @@ class ImageRippleView extends StatelessWidget {
             child: new FlatButton(
           child: null,
           color: Colors.transparent,
-          onPressed: showRipple ? () {} : null,
+          splashColor: showRipple ? Colors.black12 : Colors.transparent,
+          highlightColor: showRipple ? Colors.black12 : Colors.transparent,
+          onPressed: onPressed ?? () {},
         )),
       ]),
     );
@@ -43,10 +47,10 @@ class ImageRippleView extends StatelessWidget {
     return radius > 0
         ? BorderRadius.circular(radius)
         : BorderRadius.only(
-            topLeft: Radius.circular(radiusTL),
-            topRight: Radius.circular(radiusTR),
-            bottomLeft: Radius.circular(radiusBL),
-            bottomRight: Radius.circular(radiusBR),
+            topLeft: Radius.circular(radiusTopLeft),
+            topRight: Radius.circular(radiusTopRight),
+            bottomLeft: Radius.circular(radiusBottomLeft),
+            bottomRight: Radius.circular(radiusBottomRight),
           );
   }
 }

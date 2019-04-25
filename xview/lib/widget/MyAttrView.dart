@@ -32,7 +32,7 @@ class MyAttrView extends StatelessWidget {
   final double borderWidth;
   final Color borderColor;
 
-  final double radiusAll; //外框圓角
+  final double radius; //外框圓角
   final double radiusTopLeft;
   final double radiusTopRight;
   final double radiusBottomLeft;
@@ -44,7 +44,7 @@ class MyAttrView extends StatelessWidget {
   final double iconMarginRight;
   final double iconMarginBottom;
 
-  final double elevation; //陰影
+  final double elevation; //陰影大小
   final Color shadowColor; //陰影顏色
   final Color splashColor; //水波紋顏色
   final Color highlightColor; //點擊時顏色
@@ -81,7 +81,7 @@ class MyAttrView extends StatelessWidget {
     this.iconMarginBottom = 0,
     this.borderWidth = 0,
     this.borderColor = Colors.transparent,
-    this.radiusAll = 0,
+    this.radius = 0,
     this.radiusTopLeft = 0,
     this.radiusTopRight = 0,
     this.radiusBottomLeft = 0,
@@ -177,8 +177,8 @@ class MyAttrView extends StatelessWidget {
   }
 
   _setBorderRadius() {
-    return radiusAll != 0
-        ? BorderRadius.circular(radiusAll)
+    return radius != 0
+        ? BorderRadius.circular(radius)
         : BorderRadius.only(
             topLeft: Radius.circular(radiusTopLeft),
             topRight: Radius.circular(radiusTopRight),
