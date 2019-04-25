@@ -2,18 +2,8 @@
 
 A new Flutter package.
 
-## Getting Started
-
-This project is a starting point for a Dart
-[package](https://flutter.io/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
-
-# pubspec.yaml
+# import 
+### pubspec.yaml
 
 ```yaml
 dependencies:
@@ -28,52 +18,51 @@ dependencies:
 ### MyAttrView用法
 ```dart
 MyAttrView(
-                  text: "asdad",
-                  textColor: Colors.white,
-                  iconMargin: 10,
-                  padding: 10,
-                  margin: 5,
-                  textSize: 20,
-                  elevation: 5,
-                  shadowColor: Colors.white,
-                  backgroundColor: Colors.deepOrange,
-                  borderColor: Colors.cyan,
-                  borderWidth: 1,
-                  imgWidth: 50,
-                  imgHeight: 50,
-                  radiusAll: 30,
-                  imgFileLeft: "assets/images/ic_home1.png",
-                  imgFileTop: "assets/images/ic_home2.png",
-                  imgFileRight: "assets/images/ic_home3.png",
-                  imgFileBottom: "assets/images/ic_home4.png",
-                  onPressed: () {
-                    print("1236666666");
-                  },
-                  splashColor: Colors.brown,
-                  highlightColor: Colors.deepPurpleAccent,
-                )
+	text: "asdad",
+	textColor: Colors.white,
+	iconMargin: 10,
+	padding: 10,
+	margin: 5,
+	textSize: 20,
+	elevation: 5,
+	shadowColor: Colors.white,
+	backgroundColor: Colors.deepOrange,
+	borderColor: Colors.cyan,
+	borderWidth: 1,
+	imgWidth: 50,
+	imgHeight: 50,
+	radiusAll: 30,
+	imgFileLeft: "assets/images/ic_home1.png",
+	imgFileTop: "assets/images/ic_home2.png",
+	imgFileRight: "assets/images/ic_home3.png",
+	imgFileBottom: "assets/images/ic_home4.png",
+	onPressed: () {
+	  print("1236666666");
+	},
+	splashColor: Colors.brown,
+	highlightColor: Colors.deepPurpleAccent,
+)
 ```
-| xml屬性 | 說明 | 單位 |
-| --- | --- | --- |
-| av_borderColor | 外框線條顏色 | #ffffff、R.color.red |
-| av_borderWidth | 外框大小 | dp |
-| av_contentBackground | 內圈顏色 | #ffffff、@color/red、@drawable/bg_drawer |
-| av_contentTextSizeSp | 文字大小 | sp |
-| av_contentText | 文字 | String、StringRes |
-| av_contentTextColor | 文字顏色 | #ffffff、@color/red、@drawable/bg_drawer |
-| av_icon_drawable_left | 左icon | #ffffff、@color/red、@drawable/bg_drawer |
-| av_icon_drawable_top | 上icon | #ffffff、@color/red、@drawable/bg_drawer |
-| av_icon_drawable_right | 右icon | #ffffff、@color/red、@drawable/bg_drawer |
-| av_icon_drawable_bottom | 下icon | #ffffff、@color/red、@drawable/bg_drawer |
-| av_icon_drawable_mHeight | icon高(目前icon統一) | dp |
-| av_icon_drawable_mWidth | icon寬(目前icon統一) | dp |
-| av_icon_drawable_margin | icon與文字距離 | dp |
-| av_icon_drawable_tint | icon渲染色 | #ffffff、@color/red |
-| av_radius | 圓角(優先度比單一設置圓角高) | dp |
-| av_radius_bottomLeft | 左下圓角 | dp |
-| av_radius_bottomRight | 右下圓角 | dp |
-| av_radius_topLeft | 左上圓角 | dp |
-| av_radius_topRight | 右上圓角 | dp |
+
+| xml屬性 | 說明 | 單位 | 備註 |
+| --- | --- | --- | --- |
+| text | 中間文字 | string |  |
+| backgroundColor | 背景色 | Color |  |
+| onPressed | 點擊事件 | VoidCallback |  |
+| padding | 內部Padding | double |  |
+| imgFileLeft | 左image | double | assets/image/ic_home.png |
+| imgWidth | image寬 | double |  |
+| imgHeight | image高 | double |  |
+| imgTint | image繪製顏色 | Color |  |
+| borderWidth | 外框線寬度 | double |  |
+| borderColor | 外框線顏色 | Color |  |
+| radius | 外框圓角 | double |  |
+| iconMargin | icon與文字的距離 | double |  |
+| elevation | 陰影大小 | double |  |
+| shadowColor | 陰影顏色 | Color |  |
+| splashColor | 水波紋顏色 | Color |  |
+| highlightColor | 點擊時顏色 | Color |  |
+| colorBrightness | 點擊時顏色 | Color | Brightness.light、Brightness.dark |
 
 ### HeaderView用法
 ```xml
