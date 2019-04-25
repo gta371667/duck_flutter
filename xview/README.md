@@ -75,7 +75,7 @@ ImageRippleView(
 | 屬性 | 說明 | 單位 | 備註 |
 | --- | --- | --- | --- |
 | image | 背景色 | Color |  |
-| showRipple | 是否顯示水波紋 | boolean |  |
+| showRipple | 是否顯示水波紋 | boolean | 預設true |
 | onPressed | 點擊事件 | VoidCallback |  |
 | radius | 圓角 | double |  |
 
