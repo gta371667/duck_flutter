@@ -1,7 +1,7 @@
 import 'package:duck_flutter/adapter/IconAdapter.dart';
 import 'package:duck_flutter/model/IconModel.dart';
-import 'package:xview/widget/MyMaterialView.dart';
 import 'package:flutter/material.dart';
+import 'package:xview/widget/MyMaterialView.dart';
 import 'package:xview/xview.dart';
 
 class FavoriteFragment extends StatelessWidget {
@@ -71,6 +71,23 @@ class FavoriteFragment extends StatelessWidget {
                       },
                     ),
                   ),
+                  MyAttrView(
+                    textColor: Colors.red,
+                    backgroundColor: Colors.brown,
+                    text: "6666",
+                    imgFileLeft: "assets/images/ic_close_menu.png",
+                    imgFileTop: "assets/images/ic_close_menu.png",
+                    imgFileRight: "assets/images/ic_close_menu.png",
+                    imgFileBottom: "assets/images/ic_close_menu.png",
+                    radius: 6,
+                    padding: 10,
+                    borderColor: Colors.white,
+                    borderWidth: 2,
+                    onPressed: () {
+                      print("aaaaa");
+                    },
+                  ),
+//                  ExtendView(),
                 ],
               ),
               new Container(

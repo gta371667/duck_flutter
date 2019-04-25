@@ -47,7 +47,7 @@ class MyMaterialView extends StatelessWidget {
     this.paddingRight = 0,
     this.paddingBottom = 0,
     this.borderWidth = 0,
-    this.borderColor = Colors.black,
+    this.borderColor = Colors.transparent,
     this.radius = 0,
     this.radiusTopLeft = 0,
     this.radiusTopRight = 0,
@@ -55,8 +55,8 @@ class MyMaterialView extends StatelessWidget {
     this.radiusBottomRight = 0,
     this.elevation = 0,
     this.shadowColor = Colors.black,
-    this.splashColor,
-    this.highlightColor,
+    this.splashColor = Colors.black12,
+    this.highlightColor = Colors.black12,
     this.child,
   })  : assert(child != null),
         super(key: key);
@@ -71,8 +71,8 @@ class MyMaterialView extends StatelessWidget {
           elevation: elevation,
           shadowColor: shadowColor,
           child: InkWell(
-            highlightColor: highlightColor,
             splashColor: splashColor,
+            highlightColor: highlightColor,
             onTap: onPressed,
             customBorder: _setShape(),
             child: Container(
@@ -93,29 +93,29 @@ class MyMaterialView extends StatelessWidget {
     return radius != 0
         ? BorderRadius.circular(radius)
         : BorderRadius.only(
-        topLeft: Radius.circular(radiusTopLeft),
-        topRight: Radius.circular(radiusTopRight),
-        bottomLeft: Radius.circular(radiusBottomLeft),
-        bottomRight: Radius.circular(radiusBottomRight));
+            topLeft: Radius.circular(radiusTopLeft),
+            topRight: Radius.circular(radiusTopRight),
+            bottomLeft: Radius.circular(radiusBottomLeft),
+            bottomRight: Radius.circular(radiusBottomRight));
   }
 
   _setParentMargin() {
     return margin != 0
         ? EdgeInsets.all(margin)
         : EdgeInsets.only(
-        top: marginTop,
-        right: marginRight,
-        left: marginLeft,
-        bottom: marginBottom);
+            top: marginTop,
+            right: marginRight,
+            left: marginLeft,
+            bottom: marginBottom);
   }
 
   _setChildPadding() {
     return padding != 0
         ? EdgeInsets.all(padding)
         : EdgeInsets.only(
-        top: paddingTop,
-        right: paddingRight,
-        left: paddingLeft,
-        bottom: paddingBottom);
+            top: paddingTop,
+            right: paddingRight,
+            left: paddingLeft,
+            bottom: paddingBottom);
   }
 }
