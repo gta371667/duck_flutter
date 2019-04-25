@@ -1,4 +1,4 @@
-# xview_flutter
+# xview
 
 A new Flutter package.
 
