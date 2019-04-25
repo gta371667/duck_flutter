@@ -23,30 +23,35 @@ dependencies:
       path: xview
 ```
 
-## 包含MyAttrView、HeaderView、DuckListView、DuckRecyclerView
+## 包含ImageRippleView、MyAttrView、MyMaterialView
 
 ### MyAttrView用法
-```xml
- <com.duck.widget.MyAttrView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:av_borderColor="@color/black"
-        app:av_borderWidth="1dp"
-        app:av_contentBackground="@color/colorAccent"
-        app:av_contentTextSizeSp="14sp"
-        app:av_contentText="123"
-        app:av_contentTextColor="@color/black"
-        app:av_icon_drawable_left="@drawable/xview_menu"
-        app:av_icon_drawable_mHeight="20dp"
-        app:av_icon_drawable_mWidth="20dp"
-        app:av_icon_drawable_margin="5dp"
-        app:av_icon_drawable_tint="@color/colorPrimaryDark"
-        app:av_radius="30dp"
-	app:av_radius_bottomLeft="5dp"
-        app:av_radius_bottomRight="5dp"
-        app:av_radius_topLeft="5dp"
-        app:av_radius_topRight="5dp"
-        />
+```dart
+MyAttrView(
+                  text: "asdad",
+                  textColor: Colors.white,
+                  iconMargin: 10,
+                  padding: 10,
+                  margin: 5,
+                  textSize: 20,
+                  elevation: 5,
+                  shadowColor: Colors.white,
+                  backgroundColor: Colors.deepOrange,
+                  borderColor: Colors.cyan,
+                  borderWidth: 1,
+                  imgWidth: 50,
+                  imgHeight: 50,
+                  radiusAll: 30,
+                  imgFileLeft: "assets/images/ic_home1.png",
+                  imgFileTop: "assets/images/ic_home2.png",
+                  imgFileRight: "assets/images/ic_home3.png",
+                  imgFileBottom: "assets/images/ic_home4.png",
+                  onPressed: () {
+                    print("1236666666");
+                  },
+                  splashColor: Colors.brown,
+                  highlightColor: Colors.deepPurpleAccent,
+                )
 ```
 | xml屬性 | 說明 | 單位 |
 | --- | --- | --- |
