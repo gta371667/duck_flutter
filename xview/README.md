@@ -44,7 +44,7 @@ MyAttrView(
 )
 ```
 
-| xml屬性 | 說明 | 單位 | 備註 |
+| 屬性 | 說明 | 單位 | 備註 |
 | --- | --- | --- | --- |
 | text | 中間文字 | string |  |
 | backgroundColor | 背景色 | Color |  |
@@ -62,8 +62,7 @@ MyAttrView(
 | shadowColor | 陰影顏色 | Color |  |
 | splashColor | 水波紋顏色 | Color |  |
 | highlightColor | 點擊時顏色 | Color |  |
-| colorBrightness | 點擊時顏色 | Color | Brightness.light、Brightness.dark |
-
+| colorBrightness | 水波紋亮度 | Color | Brightness.light、Brightness.dark |
 
 ### ImageRippleView 有水波紋的imageView
 ```flutter
@@ -73,10 +72,43 @@ ImageRippleView(
 	radius: 5,
 )
 ```
-| xml屬性 | 說明 | 單位 | 備註 |
+| 屬性 | 說明 | 單位 | 備註 |
 | --- | --- | --- | --- |
 | image | 背景色 | Color |  |
 | showRipple | 是否顯示水波紋 | boolean |  |
 | onPressed | 點擊事件 | VoidCallback |  |
 | radius | 圓角 | double |  |
+
+
+### MyMaterialView 包含margin、padding、點擊事件、水波紋、圓角、外框線
+```flutter
+MyMaterialView(
+	margin: 5,
+	padding: 5,
+	backgroundColor: Colors.green,
+	borderColor: Colors.cyan,
+	borderWidth: 1,
+	radiusAll: 30,
+	onPressed: () {},
+	splashColor: Colors.deepPurple,
+	child: Text(
+		"121313",
+		style: TextStyle(color: Colors.white),
+	),
+),
+```
+| 屬性 | 說明 | 單位 | 備註 |
+| --- | --- | --- | --- |
+| child | child | Widget |  |
+| backgroundColor | 背景色 | Color |  |
+| onPressed | 點擊事件 | GestureTapCallback |  |
+| margin | 父margin | double |  |
+| padding | 內部Padding | double |  |
+| borderWidth | 外框線寬度 | double |  |
+| borderColor | 外框線顏色 | Color |  |
+| radius | 外框圓角 | double |  |
+| elevation | 陰影大小 | double |  |
+| shadowColor | 陰影顏色 | Color |  |
+| splashColor | 水波紋顏色 | Color |  |
+| highlightColor | 點擊時顏色 | Color |  |
 
