@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:duck_flutter/model/DrawerModel.dart';
 import 'package:duck_flutter/res/ColorRes.dart';
-import 'package:duck_flutter/widget/MyMaterialView.dart';
+import 'package:xview/widget/MyMaterialView.dart';
 
 //側選單列表
 class DrawerAdapter extends StatelessWidget {

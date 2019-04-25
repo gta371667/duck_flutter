@@ -7,7 +7,7 @@ import 'package:duck_flutter/page/NewsFragment.dart';
 import 'package:duck_flutter/res/ColorRes.dart';
 import 'package:duck_flutter/widget/base/BaseStatefulWidget.dart';
 import 'package:flutter/material.dart';
-import 'package:xview/tools/ToolsPhonePixel.dart';
+import 'package:xview/xview.dart';
 
 /// [DrawerAdapter]
 class MainActivity extends BaseStatefulWidget {

@@ -10,3 +10,5 @@ library xview;
 
 export 'tools/ToolsPhonePixel.dart';
 export 'widget/ImageRippleView.dart';
+export 'widget/MyAttrView.dart';
+export 'widget/MyMaterialView.dart';

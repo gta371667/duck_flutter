@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-///666666
-class MyAttrView extends StatefulWidget {
+class MyAttrView extends StatelessWidget {
   final Color backgroundColor; //背景色
   final VoidCallback onPressed; //點擊事件
 
@@ -22,14 +20,14 @@ class MyAttrView extends StatefulWidget {
   final double paddingRight;
   final double paddingBottom;
 
-  final String imgFileLeft; //圖片名稱 ex:ic_home.png
+  final String imgFileLeft; //圖片名稱 ex:assets/image/ic_home.png
   final String imgFileTop;
   final String imgFileRight;
   final String imgFileBottom;
 
   final double imgWidth;
   final double imgHeight;
-  final Color imgTint; //繪製顏色
+  final Color imgTint; //圖片繪製顏色
 
   final double borderWidth;
   final Color borderColor;
@@ -97,40 +95,33 @@ class MyAttrView extends StatefulWidget {
         super(key: key);
 
   @override
-  State<StatefulWidget> createState() {
-    return _MyAttrViewState();
-  }
-}
-
-class _MyAttrViewState extends State<MyAttrView> {
-  @override
   Widget build(BuildContext context) {
     return new Container(
       margin: _setParentMargin(), //全局margin
       child: new Material(
-          color: widget.backgroundColor,
+          color: backgroundColor,
           shape: _setShape(),
-          elevation: widget.elevation,
-          shadowColor: widget.shadowColor,
+          elevation: elevation,
+          shadowColor: shadowColor,
           child: FlatButton(
-            colorBrightness: widget.colorBrightness,
-            splashColor: widget.splashColor,
-            highlightColor: widget.highlightColor,
+            colorBrightness: colorBrightness,
+            splashColor: splashColor,
+            highlightColor: highlightColor,
             shape: _setShape(),
             //點擊事件
-            onPressed: widget.onPressed,
+            onPressed: onPressed,
             //內部padding
             padding: _setChildPadding(),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 new Offstage(
-                  offstage: widget.imgFileTop.length == 0, //上icon
+                  offstage: imgFileTop.length == 0, //上icon
                   child: Image.asset(
-                    "assets/${widget.imgFileTop}",
-                    width: widget.imgWidth,
-                    height: widget.imgHeight,
-                    color: widget.imgTint,
+                    imgFileTop,
+                    width: imgWidth,
+                    height: imgHeight,
+                    color: imgTint,
                   ),
                 ),
                 new Row(
@@ -138,40 +129,39 @@ class _MyAttrViewState extends State<MyAttrView> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     new Offstage(
-                      offstage: widget.imgFileLeft.length == 0, //左icon
+                      offstage: imgFileLeft.length == 0, //左icon
                       child: Image.asset(
-                        "assets/${widget.imgFileLeft}",
-                        width: widget.imgWidth,
-                        height: widget.imgHeight,
-                        color: widget.imgTint,
+                        imgFileLeft,
+                        width: imgWidth,
+                        height: imgHeight,
+                        color: imgTint,
                       ),
                     ),
                     new Container(
                       margin: _setIconMargin(),
                       child: Text(
-                        widget.text,
-                        style: TextStyle(
-                            color: widget.textColor, fontSize: widget.textSize),
+                        text,
+                        style: TextStyle(color: textColor, fontSize: textSize),
                       ),
                     ),
                     new Offstage(
-                      offstage: widget.imgFileRight.length == 0, //右icon
+                      offstage: imgFileRight.length == 0, //右icon
                       child: Image.asset(
-                        "assets/${widget.imgFileRight}",
-                        width: widget.imgWidth,
-                        height: widget.imgHeight,
-                        color: widget.imgTint,
+                        imgFileRight,
+                        width: imgWidth,
+                        height: imgHeight,
+                        color: imgTint,
                       ),
                     ),
                   ],
                 ),
                 new Offstage(
-                  offstage: widget.imgFileBottom.length == 0, //下icon
+                  offstage: imgFileBottom.length == 0, //下icon
                   child: Image.asset(
-                    "assets/${widget.imgFileBottom}",
-                    width: widget.imgWidth,
-                    height: widget.imgHeight,
-                    color: widget.imgTint,
+                    imgFileBottom,
+                    width: imgWidth,
+                    height: imgHeight,
+                    color: imgTint,
                   ),
                 ),
               ],
@@ -182,47 +172,47 @@ class _MyAttrViewState extends State<MyAttrView> {
 
   _setShape() {
     return new RoundedRectangleBorder(
-        side: BorderSide(width: widget.borderWidth, color: widget.borderColor),
+        side: BorderSide(width: borderWidth, color: borderColor),
         borderRadius: _setBorderRadius());
   }
 
   _setBorderRadius() {
-    return widget.radiusAll != 0
-        ? BorderRadius.circular(widget.radiusAll)
+    return radiusAll != 0
+        ? BorderRadius.circular(radiusAll)
         : BorderRadius.only(
-            topLeft: Radius.circular(widget.radiusTopLeft),
-            topRight: Radius.circular(widget.radiusTopRight),
-            bottomLeft: Radius.circular(widget.radiusBottomLeft),
-            bottomRight: Radius.circular(widget.radiusBottomRight));
+            topLeft: Radius.circular(radiusTopLeft),
+            topRight: Radius.circular(radiusTopRight),
+            bottomLeft: Radius.circular(radiusBottomLeft),
+            bottomRight: Radius.circular(radiusBottomRight));
   }
 
   _setParentMargin() {
-    return widget.margin != 0
-        ? EdgeInsets.all(widget.margin)
+    return margin != 0
+        ? EdgeInsets.all(margin)
         : EdgeInsets.only(
-            top: widget.marginTop,
-            right: widget.marginRight,
-            left: widget.marginLeft,
-            bottom: widget.marginBottom);
+            top: marginTop,
+            right: marginRight,
+            left: marginLeft,
+            bottom: marginBottom);
   }
 
   _setChildPadding() {
-    return widget.padding != 0
-        ? EdgeInsets.all(widget.padding)
+    return padding != 0
+        ? EdgeInsets.all(padding)
         : EdgeInsets.only(
-            top: widget.paddingTop,
-            right: widget.paddingRight,
-            left: widget.paddingLeft,
-            bottom: widget.paddingBottom);
+            top: paddingTop,
+            right: paddingRight,
+            left: paddingLeft,
+            bottom: paddingBottom);
   }
 
   _setIconMargin() {
-    return widget.iconMargin != 0
-        ? EdgeInsets.all(widget.iconMargin)
+    return iconMargin != 0
+        ? EdgeInsets.all(iconMargin)
         : EdgeInsets.only(
-            top: widget.iconMarginTop,
-            right: widget.iconMarginRight,
-            left: widget.iconMarginLeft,
-            bottom: widget.iconMarginBottom);
+            top: iconMarginTop,
+            right: iconMarginRight,
+            left: iconMarginLeft,
+            bottom: iconMarginBottom);
   }
 }

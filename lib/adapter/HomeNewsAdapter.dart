@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:duck_flutter/model/NewsModel.dart';
-import 'package:duck_flutter/widget/MyMaterialView.dart';
+import 'package:xview/widget/MyMaterialView.dart';
 
 class HomeNewsAdapter extends StatelessWidget {
   HomeNewsAdapter(this.position, this.data);

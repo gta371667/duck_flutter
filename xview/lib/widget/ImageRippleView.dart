@@ -33,11 +33,7 @@ class ImageRippleView extends StatelessWidget {
             child: new FlatButton(
           child: null,
           color: Colors.transparent,
-          onPressed: showRipple
-              ? () {
-                  print("adasdadad");
-                }
-              : null,
+          onPressed: showRipple ? () {} : null,
         )),
       ]),
     );

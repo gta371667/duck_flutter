@@ -1,10 +1,8 @@
 import 'package:duck_flutter/adapter/IconAdapter.dart';
 import 'package:duck_flutter/model/IconModel.dart';
-import 'package:duck_flutter/widget/MyAttrView.dart';
-import 'package:duck_flutter/widget/MyMaterialView.dart';
-import 'package:duck_flutter/widget/TestView.dart';
+import 'package:xview/widget/MyMaterialView.dart';
 import 'package:flutter/material.dart';
-import 'package:xview/widget/ImageRippleView.dart';
+import 'package:xview/xview.dart';
 
 class FavoriteFragment extends StatelessWidget {
   List<IconModel> getArray() {
@@ -64,10 +62,10 @@ class FavoriteFragment extends StatelessWidget {
                       radiusBottomRight: 50,
                       radiusTopLeft: 50,
                       radiusTopRight: 10,
-                      imgFileLeft: "ic_home1.png",
-                      imgFileTop: "ic_home2.png",
-                      imgFileRight: "ic_home3.png",
-                      imgFileBottom: "ic_home4.png",
+                      imgFileLeft: "assets/images/ic_home1.png",
+                      imgFileTop: "assets/images/ic_home2.png",
+                      imgFileRight: "assets/images/ic_home3.png",
+                      imgFileBottom: "assets/images/ic_home4.png",
                       onPressed: () {
                         print("1236666666");
                       },
@@ -95,10 +93,10 @@ class FavoriteFragment extends StatelessWidget {
                   radiusBottomRight: 5,
                   radiusTopLeft: 5,
                   radiusTopRight: 5,
-                  imgFileLeft: "ic_home1.png",
-                  imgFileTop: "ic_home2.png",
-                  imgFileRight: "ic_home3.png",
-                  imgFileBottom: "ic_home4.png",
+                  imgFileLeft: "assets/images/ic_home1.png",
+                  imgFileTop: "assets/images/ic_home2.png",
+                  imgFileRight: "assets/images/ic_home3.png",
+                  imgFileBottom: "assets/images/ic_home4.png",
                   onPressed: () {
                     print("1236666666");
                   },
@@ -130,7 +128,7 @@ class FavoriteFragment extends StatelessWidget {
               ),
               new Container(
                 alignment: Alignment.centerRight, //對齊
-                child: TestView(
+                child: MyAttrView(
                   text: "asdad",
                   textColor: Colors.white,
                   iconMargin: 10,
@@ -145,10 +143,10 @@ class FavoriteFragment extends StatelessWidget {
                   imgWidth: 50,
                   imgHeight: 50,
                   radiusAll: 30,
-                  imgFileLeft: "ic_home1.png",
-                  imgFileTop: "ic_home2.png",
-                  imgFileRight: "ic_home3.png",
-                  imgFileBottom: "ic_home4.png",
+                  imgFileLeft: "assets/images/ic_home1.png",
+                  imgFileTop: "assets/images/ic_home2.png",
+                  imgFileRight: "assets/images/ic_home3.png",
+                  imgFileBottom: "assets/images/ic_home4.png",
                   onPressed: () {
                     print("1236666666");
                   },

@@ -1,4 +1,4 @@
-import 'package:duck_flutter/widget/MyMaterialView.dart';
+import 'package:xview/widget/MyMaterialView.dart';
 import 'package:duck_flutter/widget/base/BaseState.dart';
 import 'package:duck_flutter/widget/base/BaseStatefulWidget.dart';
 import 'package:duck_flutter/widget/BaseAppBar.dart';

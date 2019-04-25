@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 ///包含margin、padding、點擊事件、水波紋、圓角、外框線
-class MyMaterialView extends StatefulWidget {
+class MyMaterialView extends StatelessWidget {
   final Color backgroundColor; //背景色
   final GestureTapCallback onTap; //點擊事件
   final Widget child;
@@ -47,7 +47,7 @@ class MyMaterialView extends StatefulWidget {
     this.paddingRight = 0,
     this.paddingBottom = 0,
     this.borderWidth = 0,
-    this.borderColor = Colors.transparent,
+    this.borderColor = Colors.black,
     this.radiusAll = 0,
     this.radiusTopLeft = 0,
     this.radiusTopRight = 0,
@@ -62,29 +62,22 @@ class MyMaterialView extends StatefulWidget {
         super(key: key);
 
   @override
-  State<StatefulWidget> createState() {
-    return _MyMaterialViewState();
-  }
-}
-
-class _MyMaterialViewState extends State<MyMaterialView> {
-  @override
   Widget build(BuildContext context) {
     return new Container(
       margin: _setParentMargin(), //全局margin
       child: new Material(
-          color: widget.backgroundColor,
+          color: backgroundColor,
           shape: _setShape(),
-          elevation: widget.elevation,
-          shadowColor: widget.shadowColor,
+          elevation: elevation,
+          shadowColor: shadowColor,
           child: InkWell(
-            highlightColor: widget.highlightColor,
-            splashColor: widget.splashColor,
-            onTap: widget.onTap,
+            highlightColor: highlightColor,
+            splashColor: splashColor,
+            onTap: onTap,
             customBorder: _setShape(),
             child: Container(
               padding: _setChildPadding(),
-              child: widget.child,
+              child: child,
             ),
           )),
     );
@@ -92,37 +85,37 @@ class _MyMaterialViewState extends State<MyMaterialView> {
 
   _setShape() {
     return new RoundedRectangleBorder(
-        side: BorderSide(width: widget.borderWidth, color: widget.borderColor),
+        side: BorderSide(width: borderWidth, color: borderColor),
         borderRadius: _setBorderRadius());
   }
 
   _setBorderRadius() {
-    return widget.radiusAll != 0
-        ? BorderRadius.circular(widget.radiusAll)
+    return radiusAll != 0
+        ? BorderRadius.circular(radiusAll)
         : BorderRadius.only(
-            topLeft: Radius.circular(widget.radiusTopLeft),
-            topRight: Radius.circular(widget.radiusTopRight),
-            bottomLeft: Radius.circular(widget.radiusBottomLeft),
-            bottomRight: Radius.circular(widget.radiusBottomRight));
+        topLeft: Radius.circular(radiusTopLeft),
+        topRight: Radius.circular(radiusTopRight),
+        bottomLeft: Radius.circular(radiusBottomLeft),
+        bottomRight: Radius.circular(radiusBottomRight));
   }
 
   _setParentMargin() {
-    return widget.margin != 0
-        ? EdgeInsets.all(widget.margin)
+    return margin != 0
+        ? EdgeInsets.all(margin)
         : EdgeInsets.only(
-            top: widget.marginTop,
-            right: widget.marginRight,
-            left: widget.marginLeft,
-            bottom: widget.marginBottom);
+        top: marginTop,
+        right: marginRight,
+        left: marginLeft,
+        bottom: marginBottom);
   }
 
   _setChildPadding() {
-    return widget.padding != 0
-        ? EdgeInsets.all(widget.padding)
+    return padding != 0
+        ? EdgeInsets.all(padding)
         : EdgeInsets.only(
-            top: widget.paddingTop,
-            right: widget.paddingRight,
-            left: widget.paddingLeft,
-            bottom: widget.paddingBottom);
+        top: paddingTop,
+        right: paddingRight,
+        left: paddingLeft,
+        bottom: paddingBottom);
   }
 }
