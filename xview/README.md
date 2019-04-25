@@ -13,18 +13,14 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.io/docs), which offers tutorials, 
 samples, guidance on mobile development, and a full API reference.
 
-# yaml
+# pubspec.yaml
 
-```gradle
-allprojects {
-	repositories {
-		maven { url 'https://jitpack.io' }
-	}
-}
-
-dependencies {
-	implementation 'com.github.gta371667:Xview:{version}'
-}
+```yaml
+dependencies:
+  xview:
+    git:
+      url: git://github.com/gta371667/duck_flutter.git
+      path: xview
 ```
 
 ## 包含MyAttrView、HeaderView、DuckListView、DuckRecyclerView
