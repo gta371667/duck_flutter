@@ -50,6 +50,9 @@ class MyAttrView extends StatelessWidget {
   final double borderWidth;
   final Color borderColor;
 
+  final CrossAxisAlignment crossAxisAlignment;
+  final MainAxisAlignment mainAxisAlignment;
+
   const MyAttrView({
     Key key,
     this.imgFileLeft = "",
@@ -90,6 +93,8 @@ class MyAttrView extends StatelessWidget {
     this.highlightColor = Colors.black12,
     this.borderWidth = 0,
     this.borderColor = Colors.transparent,
+    this.crossAxisAlignment = CrossAxisAlignment.start,
+    this.mainAxisAlignment = MainAxisAlignment.center,
   }) : super(key: key);
 
   @override
@@ -120,6 +125,7 @@ class MyAttrView extends StatelessWidget {
       borderWidth: borderWidth,
       child: Column(
         mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: crossAxisAlignment,
         children: <Widget>[
           new Offstage(
             offstage: imgFileTop.length == 0, //上icon
@@ -132,7 +138,7 @@ class MyAttrView extends StatelessWidget {
           ),
           new Row(
             mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: mainAxisAlignment,
             children: <Widget>[
               new Offstage(
                 offstage: imgFileLeft.length == 0, //左icon

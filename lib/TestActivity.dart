@@ -3,6 +3,7 @@ import 'package:duck_flutter/widget/base/BaseState.dart';
 import 'package:duck_flutter/widget/base/BaseStatefulWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:xview/widget/MyMaterialView.dart';
+import 'package:xview/xview.dart';
 
 class TestActivity extends BaseStatefulWidget {
   @override
@@ -126,6 +127,22 @@ class TestActivityState extends BaseState<TestActivity> {
                     ),
                   ),
                 ),
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: MyAttrView(
+                        text: "aaaaa",
+                        backgroundColor: Colors.amberAccent,
+                      ),
+                    ),
+                    Expanded(
+                      child: MyAttrView(
+                        text: "bbbb",
+                        backgroundColor: Colors.white,
+                      ),
+                    )
+                  ],
+                )
               ],
             ),
           ),
