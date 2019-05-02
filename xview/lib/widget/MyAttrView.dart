@@ -98,6 +98,7 @@ class MyAttrView extends StatelessWidget {
       backgroundColor: backgroundColor,
       onPressed: onPressed,
       padding: padding,
+      paddingTop: paddingTop,
       paddingLeft: paddingLeft,
       paddingRight: paddingRight,
       paddingBottom: paddingBottom,

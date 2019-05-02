@@ -7,6 +7,7 @@ class BaseAppBar extends AppBar {
   static const defaultImg = "assets/images/ic_arrow_back.png";
 
   final BuildContext context;
+  final PreferredSizeWidget bottom;
 
   final Color backgroundColor;
 
@@ -31,6 +32,7 @@ class BaseAppBar extends AppBar {
     Key key,
     this.backgroundColor,
     this.elevation = 0.0,
+    this.bottom,
     @required this.titleText,
     this.textColor,
     this.isCenterTitle,
@@ -44,6 +46,7 @@ class BaseAppBar extends AppBar {
   })  : assert(titleText != null),
         super(
             key: key,
+            bottom: bottom,
             backgroundColor: backgroundColor,
             centerTitle: isCenterTitle,
             elevation: elevation,
