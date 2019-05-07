@@ -32,6 +32,8 @@ class MyMaterialView extends StatelessWidget {
   final Color splashColor; //水波紋顏色
   final Color highlightColor; //點擊時顏色
 
+  final AlignmentGeometry alignment;
+
   const MyMaterialView({
     Key key,
     this.backgroundColor = Colors.transparent,
@@ -58,12 +60,14 @@ class MyMaterialView extends StatelessWidget {
     this.splashColor = Colors.black12,
     this.highlightColor = Colors.black12,
     this.child,
+    this.alignment,
   })  : assert(child != null),
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return new Container(
+      alignment: alignment,
       margin: _setParentMargin(), //全局margin
       child: new Material(
           color: backgroundColor,

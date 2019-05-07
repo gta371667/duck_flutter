@@ -67,82 +67,86 @@ class TestActivityState extends BaseState<TestActivity> {
                         ),
                       )
                     ]),
-                SizedBox(
-                  width: 200.0,
-                  height: 500.0,
-                  child: Container(
-                    color: Colors.blue,
-                  ),
+                MyMaterialView(
+                  backgroundColor: Colors.yellow,
+                  child: Text("aaaa"),
                 ),
-                Positioned(
-                  top: 30.0,
-                  left: 20.0,
-                  right: 70.0,
-                  bottom: 60,
-                  child: Container(
-                      alignment: Alignment.center,
-                      color: Colors.deepPurpleAccent,
-                      child: Text("asdasdasd")),
-                ),
-                Positioned(
-                  top: 20,
-                  right: 100,
-                  left: 10,
-                  bottom: 20,
-                  child: MyMaterialView(
-                    backgroundColor: Colors.red,
-                    radius: 30,
-                    padding: 10,
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/c');
-                    },
-                    child: Container(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "MyMaterialView",
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  top: 10,
-                  right: 100,
-                  left: 100,
-                  bottom: 500,
-                  child: MyMaterialView(
-                    backgroundColor: Colors.amber,
-                    radius: 30,
-                    padding: 10,
-                    onPressed: () {
+//                SizedBox(
+//                  width: 200.0,
+//                  height: 500.0,
+//                  child: Container(
+//                    color: Colors.blue,
+//                  ),
+//                ),
+//                Positioned(
+//                  top: 30.0,
+//                  left: 20.0,
+//                  right: 70.0,
+//                  bottom: 60,
+//                  child: Container(
+//                      alignment: Alignment.center,
+//                      color: Colors.deepPurpleAccent,
+//                      child: Text("asdasdasd")),
+//                ),
+//                Positioned(
+//                  top: 20,
+//                  right: 100,
+//                  left: 10,
+//                  bottom: 20,
+//                  child: MyMaterialView(
+//                    backgroundColor: Colors.red,
+//                    radius: 30,
+//                    padding: 10,
+//                    onPressed: () {
 //                      Navigator.pushNamed(context, '/c');
-                    },
-                    child: Container(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "測試theme",
-                        style: Theme.of(context).textTheme.body1,
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
-                ),
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: MyAttrView(
-                        text: "aaaaa",
-                        backgroundColor: Colors.amberAccent,
-                      ),
-                    ),
-                    Expanded(
-                      child: MyAttrView(
-                        text: "bbbb",
-                        backgroundColor: Colors.white,
-                      ),
-                    )
-                  ],
-                )
+//                    },
+//                    child: Container(
+//                      alignment: Alignment.center,
+//                      child: Text(
+//                        "MyMaterialView",
+//                        textAlign: TextAlign.center,
+//                      ),
+//                    ),
+//                  ),
+//                ),
+//                Positioned(
+//                  top: 10,
+//                  right: 100,
+//                  left: 100,
+//                  bottom: 500,
+//                  child: MyMaterialView(
+//                    backgroundColor: Colors.amber,
+//                    radius: 30,
+//                    padding: 10,
+//                    onPressed: () {
+////                      Navigator.pushNamed(context, '/c');
+//                    },
+//                    child: Container(
+//                      alignment: Alignment.center,
+//                      child: Text(
+//                        "測試theme",
+//                        style: Theme.of(context).textTheme.body1,
+//                        textAlign: TextAlign.center,
+//                      ),
+//                    ),
+//                  ),
+//                ),
+//                Row(
+//                  children: <Widget>[
+//                    Expanded(
+//                      child: MyAttrView(
+//                        text: "aaaaa",
+//                        backgroundColor: Colors.amberAccent,
+//                      ),
+//                    ),
+//                    Expanded(
+//                      child: MyAttrView(
+//                        text: "bbbb",
+//                        backgroundColor: Colors.white,
+//                      ),
+//                    )
+//                  ],
+//                )
               ],
             ),
           ),
