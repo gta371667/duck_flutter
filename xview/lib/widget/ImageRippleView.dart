@@ -38,11 +38,13 @@ class ImageRippleView extends StatelessWidget {
     return ClipRRect(
       borderRadius: setShape(),
       child: new Stack(children: <Widget>[
-        image,
+        Container(
+          child: image,
+          padding: padding,
+        ),
         new Positioned.fill(
           child: new FlatButton(
             child: null,
-            padding: padding,
             color: Colors.transparent,
             splashColor: showRipple ? splashColor : Colors.transparent,
             highlightColor: showRipple ? highlightColor : Colors.transparent,

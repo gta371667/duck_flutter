@@ -67,9 +67,16 @@ class TestActivityState extends BaseState<TestActivity> {
                         ),
                       )
                     ]),
-                MyMaterialView(
-                  backgroundColor: Colors.yellow,
-                  child: Text("aaaa"),
+                ImageRippleView(
+                  image: Image.asset(
+                    "assets/images/ic_share.png",
+                    height: 24,
+                    width: 24,
+                  ),
+                  splashColor: Colors.red,
+                  onPressed: () {
+                    print("666");
+                  },
                 ),
 //                SizedBox(
 //                  width: 200.0,
