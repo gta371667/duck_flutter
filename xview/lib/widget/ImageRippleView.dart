@@ -10,6 +10,9 @@ class ImageRippleView extends StatelessWidget {
   final double radiusBottomRight;
   final double radiusBottomLeft;
 
+  final Color splashColor;
+  final Color highlightColor;
+
   final bool showRipple;
 
   ImageRippleView({
@@ -22,6 +25,8 @@ class ImageRippleView extends StatelessWidget {
     this.radiusBottomLeft = 0,
     this.showRipple = true,
     this.onPressed,
+    this.splashColor = Colors.black12,
+    this.highlightColor = Colors.black12,
   })  : assert(image != null),
         super(key: key);
 
@@ -35,8 +40,8 @@ class ImageRippleView extends StatelessWidget {
             child: new FlatButton(
           child: null,
           color: Colors.transparent,
-          splashColor: showRipple ? Colors.black12 : Colors.transparent,
-          highlightColor: showRipple ? Colors.black12 : Colors.transparent,
+          splashColor: showRipple ? splashColor : Colors.transparent,
+          highlightColor: showRipple ? highlightColor : Colors.transparent,
           onPressed: onPressed ?? () {},
         )),
       ]),
