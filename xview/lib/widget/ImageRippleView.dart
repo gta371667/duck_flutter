@@ -13,6 +13,8 @@ class ImageRippleView extends StatelessWidget {
   final Color splashColor;
   final Color highlightColor;
 
+  final EdgeInsetsGeometry padding;
+
   final bool showRipple;
 
   ImageRippleView({
@@ -27,6 +29,7 @@ class ImageRippleView extends StatelessWidget {
     this.onPressed,
     this.splashColor = Colors.black12,
     this.highlightColor = Colors.black12,
+    this.padding,
   })  : assert(image != null),
         super(key: key);
 
@@ -34,17 +37,20 @@ class ImageRippleView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: setShape(),
-      child: new Stack(children: <Widget>[
-        image,
-        new Positioned.fill(
-            child: new FlatButton(
-          child: null,
-          color: Colors.transparent,
-          splashColor: showRipple ? splashColor : Colors.transparent,
-          highlightColor: showRipple ? highlightColor : Colors.transparent,
-          onPressed: onPressed ?? () {},
-        )),
-      ]),
+      child: Padding(
+        padding: padding,
+        child: new Stack(children: <Widget>[
+          image,
+          new Positioned.fill(
+              child: new FlatButton(
+            child: null,
+            color: Colors.transparent,
+            splashColor: showRipple ? splashColor : Colors.transparent,
+            highlightColor: showRipple ? highlightColor : Colors.transparent,
+            onPressed: onPressed ?? () {},
+          )),
+        ]),
+      ),
     );
   }
 
