@@ -93,7 +93,7 @@ class MyAttrView extends StatelessWidget {
     this.highlightColor = Colors.black12,
     this.borderWidth = 0,
     this.borderColor = Colors.transparent,
-    this.crossAxisAlignment = CrossAxisAlignment.start,
+    this.crossAxisAlignment = CrossAxisAlignment.center,
     this.mainAxisAlignment = MainAxisAlignment.center,
   }) : super(key: key);
 
@@ -127,27 +127,31 @@ class MyAttrView extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: crossAxisAlignment,
         children: <Widget>[
-          new Offstage(
-            offstage: imgFileTop.length == 0, //上icon
-            child: Image.asset(
-              imgFileTop,
-              width: imgWidth,
-              height: imgHeight,
-              color: imgTint,
-            ),
+          //上icon
+          new Container(
+            child: imgFileTop.length == 0
+                ? null
+                : Image.asset(
+                    imgFileTop,
+                    width: imgWidth,
+                    height: imgHeight,
+                    color: imgTint,
+                  ),
           ),
           new Row(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: mainAxisAlignment,
             children: <Widget>[
-              new Offstage(
-                offstage: imgFileLeft.length == 0, //左icon
-                child: Image.asset(
-                  imgFileLeft,
-                  width: imgWidth,
-                  height: imgHeight,
-                  color: imgTint,
-                ),
+              //左icon
+              new Container(
+                child: imgFileLeft.length == 0
+                    ? null
+                    : Image.asset(
+                        imgFileLeft,
+                        width: imgWidth,
+                        height: imgHeight,
+                        color: imgTint,
+                      ),
               ),
               new Container(
                 margin: _setIconMargin(),
@@ -156,25 +160,29 @@ class MyAttrView extends StatelessWidget {
                   style: TextStyle(color: textColor, fontSize: textSize),
                 ),
               ),
-              new Offstage(
-                offstage: imgFileRight.length == 0, //右icon
-                child: Image.asset(
-                  imgFileRight,
-                  width: imgWidth,
-                  height: imgHeight,
-                  color: imgTint,
-                ),
+              //右icon
+              new Container(
+                child: imgFileRight.length == 0
+                    ? null
+                    : Image.asset(
+                        imgFileRight,
+                        width: imgWidth,
+                        height: imgHeight,
+                        color: imgTint,
+                      ),
               ),
             ],
           ),
-          new Offstage(
-            offstage: imgFileBottom.length == 0, //下icon
-            child: Image.asset(
-              imgFileBottom,
-              width: imgWidth,
-              height: imgHeight,
-              color: imgTint,
-            ),
+          //下icon
+          new Container(
+            child: imgFileBottom.length == 0
+                ? null
+                : Image.asset(
+                    imgFileBottom,
+                    width: imgWidth,
+                    height: imgHeight,
+                    color: imgTint,
+                  ),
           ),
         ],
       ),
