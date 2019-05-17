@@ -93,7 +93,7 @@ class MyAttrView extends StatelessWidget {
     this.highlightColor = Colors.black12,
     this.borderWidth = 0,
     this.borderColor = Colors.transparent,
-    this.crossAxisAlignment = CrossAxisAlignment.center,
+    this.crossAxisAlignment = CrossAxisAlignment.start,
     this.mainAxisAlignment = MainAxisAlignment.center,
   }) : super(key: key);
 
