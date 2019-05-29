@@ -128,30 +128,18 @@ class MyAttrView extends StatelessWidget {
         crossAxisAlignment: crossAxisAlignment,
         children: <Widget>[
           //上icon
-          new Container(
-            child: imgFileTop.length == 0
-                ? null
-                : Image.asset(
-                    imgFileTop,
-                    width: imgWidth,
-                    height: imgHeight,
-                    color: imgTint,
-                  ),
+          Offstage(
+            offstage: imgFileTop.isEmpty,
+            child: buildImage(imgFileTop),
           ),
           new Row(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: mainAxisAlignment,
             children: <Widget>[
               //左icon
-              new Container(
-                child: imgFileLeft.length == 0
-                    ? null
-                    : Image.asset(
-                        imgFileLeft,
-                        width: imgWidth,
-                        height: imgHeight,
-                        color: imgTint,
-                      ),
+              Offstage(
+                offstage: imgFileLeft.isEmpty,
+                child: buildImage(imgFileLeft),
               ),
               new Container(
                 margin: _setIconMargin(),
@@ -161,31 +149,30 @@ class MyAttrView extends StatelessWidget {
                 ),
               ),
               //右icon
-              new Container(
-                child: imgFileRight.length == 0
-                    ? null
-                    : Image.asset(
-                        imgFileRight,
-                        width: imgWidth,
-                        height: imgHeight,
-                        color: imgTint,
-                      ),
+              Offstage(
+                offstage: imgFileRight.isEmpty,
+                child: buildImage(imgFileRight),
               ),
             ],
           ),
           //下icon
-          new Container(
-            child: imgFileBottom.length == 0
-                ? null
-                : Image.asset(
-                    imgFileBottom,
-                    width: imgWidth,
-                    height: imgHeight,
-                    color: imgTint,
-                  ),
+          Offstage(
+            offstage: imgFileBottom.isEmpty,
+            child: buildImage(imgFileBottom),
           ),
         ],
       ),
+    );
+  }
+
+  Widget buildImage(String path) {
+    if (path.isEmpty) return Container();
+
+    return Image.asset(
+      path,
+      width: imgWidth,
+      height: imgHeight,
+      color: imgTint,
     );
   }
 
