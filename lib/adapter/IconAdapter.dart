@@ -14,9 +14,10 @@ class IconAdapter extends StatelessWidget {
       margin: EdgeInsets.all(5),
       alignment: Alignment.center,
       child: ImageRippleView(
-        showRipple: false,
-        image: new Image.asset(data.drawableRes),
-        radius: 5,
+        image: new Image.asset(
+          data.drawableRes,
+          fit: BoxFit.cover,
+        ),
         onPressed: () {
           print("icon 666");
         },

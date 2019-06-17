@@ -3,11 +3,11 @@ import 'package:duck_flutter/adapter/IconAdapter.dart';
 import 'package:duck_flutter/httpAPI.dart';
 import 'package:duck_flutter/model/IconModel.dart';
 import 'package:duck_flutter/model/NewsModel.dart';
-import 'package:xview/widget/ImageRippleView.dart';
-import 'package:duck_flutter/widget/base/BaseStatefulWidget.dart';
 import 'package:duck_flutter/widget/BaseAppBar.dart';
+import 'package:duck_flutter/widget/base/BaseStatefulWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:xview/widget/ImageRippleView.dart';
 
 class HomeFragment extends BaseStatefulWidget {
   final List<Contentlist> _newsData = new List();
@@ -59,7 +59,6 @@ class HomeState extends State<HomeFragment> {
           Image.asset(
             "assets/images/ic_slider.png",
           ),
-//          iconView(),
           testIcon(),
           Container(
             color: const Color(0xfff5f5f5),
@@ -108,57 +107,6 @@ class HomeState extends State<HomeFragment> {
       },
       backgroundColor: Colors.amberAccent,
       child: Text("6666"),
-    );
-  }
-
-  iconView() {
-    return new Container(
-      margin: EdgeInsets.only(left: 10, right: 10, top: 8, bottom: 10),
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            flex: 1,
-            child: ImageRippleView(
-              image: new Image.asset(
-                "assets/images/ic_home2.png",
-              ),
-              radius: 5,
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: new Container(
-                margin: EdgeInsets.all(5),
-                child: new Stack(children: <Widget>[
-                  new Image.asset(
-                    "assets/images/ic_home2.png",
-                  ),
-                  new Positioned.fill(
-                      child: new FlatButton(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(5))),
-                    child: null,
-                    color: Colors.transparent,
-                    onPressed: () {},
-                  )),
-                ])),
-          ),
-          Expanded(
-            flex: 1,
-            child: new Container(
-              margin: EdgeInsets.all(5),
-              child: Image.asset("assets/images/ic_home3.png"),
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: new Container(
-              margin: EdgeInsets.all(5),
-              child: Image.asset("assets/images/ic_home4.png"),
-            ),
-          ),
-        ],
-      ),
     );
   }
 
@@ -218,13 +166,14 @@ class HomeState extends State<HomeFragment> {
     return Container(
       margin: EdgeInsets.only(left: 5, right: 10),
       child: GridView.builder(
-          itemCount: _iconArray.length,
-          shrinkWrap: true,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: _iconArray.length),
-          itemBuilder: (BuildContext context, int position) {
-            return IconAdapter(position, _iconArray[position]);
-          }),
+        itemCount: _iconArray.length,
+        shrinkWrap: true,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: _iconArray.length),
+        itemBuilder: (BuildContext context, int position) {
+          return IconAdapter(position, _iconArray[position]);
+        },
+      ),
     );
   }
 }

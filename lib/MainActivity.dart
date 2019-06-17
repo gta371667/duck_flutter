@@ -59,6 +59,14 @@ class _MainActivityState extends State<MainActivity> implements DrawerOnClick {
 
   @override
   Widget build(BuildContext context) {
+    print(
+        "Dp ${ToolsPhonePixel.getWidthDp(context)}  ${ToolsPhonePixel.getHeightDp(context)}");
+
+    print(
+        "Px ${ToolsPhonePixel.getWidthPx(context)}  ${ToolsPhonePixel.getHeightPx(context)}");
+
+    print("Px ${ToolsPhonePixel.getPxInDp(context)}  ");
+
     return new Scaffold(
       drawer: initDrawer(),
       backgroundColor: Colors.blue,
@@ -159,7 +167,7 @@ class _MainActivityState extends State<MainActivity> implements DrawerOnClick {
 
   initDrawer() {
     return Container(
-      width: ToolsPhonePixel.getPixelWidth(context) * 0.7,
+      width: ToolsPhonePixel.getWidthDp(context) * 0.7,
       color: Colors.white,
       child: new Column(
         children: <Widget>[

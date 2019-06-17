@@ -31,18 +31,7 @@ class TestActivityState extends BaseState<TestActivity> {
     );
   }
 
-  Container buildContainer(BuildContext context) {
-//    return Container(
-//      child: MyAttrView(
-//        text: "aaaaa",
-//        backgroundColor: Colors.blueAccent,
-//        imgFileBottom: "assets/images/gbf_bi.jpg",
-//        imgFileTop: "assets/images/gbf_bi.jpg",
-//        imgFileLeft: "assets/images/gbf_bi.jpg",
-//        imgFileRight: "assets/images/gbf_bi.jpg",
-//      ),
-//    );
-
+  Widget buildContainer(BuildContext context) {
     return Container(
       child: ConstrainedBox(
         constraints: BoxConstraints.expand(),
@@ -119,8 +108,8 @@ class TestActivityState extends BaseState<TestActivity> {
               bottom: 20,
               child: MyMaterialView(
                 backgroundColor: Colors.red,
-                radius: 30,
-                padding: 10,
+                radius: BorderRadius.circular(30),
+                padding: EdgeInsets.all(10),
                 onPressed: () {
                   Navigator.pushNamed(context, '/c');
                 },
@@ -140,8 +129,8 @@ class TestActivityState extends BaseState<TestActivity> {
               bottom: 500,
               child: MyMaterialView(
                 backgroundColor: Colors.amber,
-                radius: 30,
-                padding: 10,
+                radius: BorderRadius.circular(30),
+                padding: EdgeInsets.all(10),
                 onPressed: () {
 //                      Navigator.pushNamed(context, '/c');
                 },
@@ -190,16 +179,17 @@ class TestActivityState extends BaseState<TestActivity> {
         new Container(
           margin: EdgeInsets.fromLTRB(0, 0, 5, 0),
           child: new IconButton(
-              icon: Image.asset(
-                'assets/images/ic_bar.png',
-              ),
-              disabledColor: Colors.red,
-              highlightColor: Colors.blue,
-              splashColor: Colors.deepPurple,
-              color: Colors.black,
-              onPressed: () {
-                print("title IconButton");
-              }),
+            icon: Image.asset(
+              'assets/images/ic_bar.png',
+            ),
+            disabledColor: Colors.red,
+            highlightColor: Colors.blue,
+            splashColor: Colors.deepPurple,
+            color: Colors.black,
+            onPressed: () {
+              print("title IconButton");
+            },
+          ),
         )
       ],
     );

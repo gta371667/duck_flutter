@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:duck_flutter/model/DrawerModel.dart';
 import 'package:duck_flutter/res/ColorRes.dart';
+import 'package:flutter/material.dart';
 import 'package:xview/widget/MyMaterialView.dart';
 
 //側選單列表
@@ -20,8 +20,7 @@ class DrawerAdapter extends StatelessWidget {
       onPressed: () {
         drawerOnClick.onDrawerOnClick(position, data);
       },
-      paddingTop: 15,
-      paddingBottom: 15,
+      padding: EdgeInsets.only(top: 15, bottom: 15),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,

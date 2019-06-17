@@ -15,32 +15,13 @@ class MyAttrView extends StatelessWidget {
   final double textSize;
   final Color textColor;
 
-  final double iconMargin; //icon與文字的距離
-  final double iconMarginLeft;
-  final double iconMarginTop;
-  final double iconMarginRight;
-  final double iconMarginBottom;
-
   final Color backgroundColor; //背景色
   final GestureTapCallback onPressed; //點擊事件
 
-  final double padding; //內部padding
-  final double paddingLeft;
-  final double paddingTop;
-  final double paddingRight;
-  final double paddingBottom;
-
-  final double margin; //父margin
-  final double marginLeft;
-  final double marginTop;
-  final double marginRight;
-  final double marginBottom;
-
-  final double radius; //外框圓角
-  final double radiusTopLeft;
-  final double radiusTopRight;
-  final double radiusBottomLeft;
-  final double radiusBottomRight;
+  final EdgeInsetsGeometry iconMargin;
+  final EdgeInsetsGeometry padding; //內部padding
+  final EdgeInsetsGeometry margin; //父margin
+  final BorderRadiusGeometry radius; //外框圓角
 
   final double elevation; //陰影大小
   final Color shadowColor; //陰影顏色
@@ -65,28 +46,11 @@ class MyAttrView extends StatelessWidget {
     @required this.text,
     this.textSize = 14,
     this.textColor,
-    this.iconMargin = 0,
-    this.iconMarginLeft = 0,
-    this.iconMarginTop = 0,
-    this.iconMarginRight = 0,
-    this.iconMarginBottom = 0,
     this.backgroundColor = Colors.transparent,
     this.onPressed,
-    this.padding = 0,
-    this.paddingLeft = 0,
-    this.paddingTop = 0,
-    this.paddingRight = 0,
-    this.paddingBottom = 0,
-    this.margin = 0,
-    this.marginLeft = 0,
-    this.marginTop = 0,
-    this.marginRight = 0,
-    this.marginBottom = 0,
-    this.radius = 0,
-    this.radiusTopLeft = 0,
-    this.radiusTopRight = 0,
-    this.radiusBottomLeft = 0,
-    this.radiusBottomRight = 0,
+    this.padding,
+    this.margin,
+    this.radius,
     this.elevation = 0,
     this.shadowColor = Colors.black,
     this.splashColor = Colors.black12,
@@ -95,6 +59,7 @@ class MyAttrView extends StatelessWidget {
     this.borderColor = Colors.transparent,
     this.crossAxisAlignment = CrossAxisAlignment.center,
     this.mainAxisAlignment = MainAxisAlignment.center,
+    this.iconMargin,
   }) : super(key: key);
 
   @override
@@ -103,20 +68,8 @@ class MyAttrView extends StatelessWidget {
       backgroundColor: backgroundColor,
       onPressed: onPressed,
       padding: padding,
-      paddingTop: paddingTop,
-      paddingLeft: paddingLeft,
-      paddingRight: paddingRight,
-      paddingBottom: paddingBottom,
       margin: margin,
-      marginLeft: marginLeft,
-      marginRight: marginRight,
-      marginBottom: marginBottom,
-      marginTop: marginTop,
       radius: radius,
-      radiusTopLeft: radiusTopLeft,
-      radiusTopRight: radiusTopRight,
-      radiusBottomLeft: radiusBottomLeft,
-      radiusBottomRight: radiusBottomRight,
       elevation: elevation,
       shadowColor: shadowColor,
       splashColor: splashColor,
@@ -177,12 +130,6 @@ class MyAttrView extends StatelessWidget {
   }
 
   _setIconMargin() {
-    return iconMargin != 0
-        ? EdgeInsets.all(iconMargin)
-        : EdgeInsets.only(
-            top: iconMarginTop,
-            right: iconMarginRight,
-            left: iconMarginLeft,
-            bottom: iconMarginBottom);
+    return iconMargin ?? EdgeInsets.all(0);
   }
 }
