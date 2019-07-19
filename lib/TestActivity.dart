@@ -32,6 +32,29 @@ class TestActivityState extends BaseState<TestActivity> {
   }
 
   Widget buildContainer(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Card(
+          child: Container(
+            padding: EdgeInsets.all(15),
+            child: Text(
+              "asdasdads",
+              style: TextStyle(fontSize: 16),
+            ),
+          ),
+        ),
+        Card(
+          child: Container(
+            padding: EdgeInsets.all(15),
+            child: Text(
+              "asdasdads",
+              style: TextStyle(fontSize: 16),
+            ),
+          ),
+        ),
+      ],
+    );
+
     return Container(
       child: ConstrainedBox(
         constraints: BoxConstraints.expand(),
