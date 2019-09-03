@@ -41,29 +41,27 @@ class _MainActivityState extends State<MainActivity> implements DrawerOnClick {
 
     drawerModel.clear();
 
-    drawerModel.add(DrawerModel(0, "首頁", 'assets/images/ic_menu_home_c.png',
-        'assets/images/ic_menu_home.png', true));
-    drawerModel.add(DrawerModel(0, "新聞", 'assets/images/ic_menu_news_c.png',
-        'assets/images/ic_menu_news.png', false));
-    drawerModel.add(DrawerModel(0, "行情", 'assets/images/ic_menu_info_c.png',
-        'assets/images/ic_menu_info.png', false));
-    drawerModel.add(DrawerModel(0, "貼吧", 'assets/images/ic_menu_bar_c.png',
-        'assets/images/ic_menu_bar.png', false));
-    drawerModel.add(DrawerModel(0, "設定", 'assets/images/ic_menu_setting_c.png',
-        'assets/images/ic_menu_setting.png', false));
-    drawerModel.add(DrawerModel(0, "連結", 'assets/images/ic_menu_link_c.png',
-        'assets/images/ic_menu_link.png', false));
-    drawerModel.add(DrawerModel(0, "掃描", 'assets/images/ic_menu_qrcode_c.png',
-        'assets/images/ic_menu_qrcode.png', false));
+    drawerModel.add(
+        DrawerModel(0, "首頁", 'assets/images/ic_menu_home_c.png', 'assets/images/ic_menu_home.png', true));
+    drawerModel.add(
+        DrawerModel(0, "新聞", 'assets/images/ic_menu_news_c.png', 'assets/images/ic_menu_news.png', false));
+    drawerModel.add(
+        DrawerModel(0, "行情", 'assets/images/ic_menu_info_c.png', 'assets/images/ic_menu_info.png', false));
+    drawerModel
+        .add(DrawerModel(0, "貼吧", 'assets/images/ic_menu_bar_c.png', 'assets/images/ic_menu_bar.png', false));
+    drawerModel.add(DrawerModel(
+        0, "設定", 'assets/images/ic_menu_setting_c.png', 'assets/images/ic_menu_setting.png', false));
+    drawerModel.add(
+        DrawerModel(0, "連結", 'assets/images/ic_menu_link_c.png', 'assets/images/ic_menu_link.png', false));
+    drawerModel.add(DrawerModel(
+        0, "掃描", 'assets/images/ic_menu_qrcode_c.png', 'assets/images/ic_menu_qrcode.png', false));
   }
 
   @override
   Widget build(BuildContext context) {
-    print(
-        "Dp ${ToolsPhonePixel.getWidthDp(context)}  ${ToolsPhonePixel.getHeightDp(context)}");
+    print("Dp ${ToolsPhonePixel.getWidthDp(context)}  ${ToolsPhonePixel.getHeightDp(context)}");
 
-    print(
-        "Px ${ToolsPhonePixel.getWidthPx(context)}  ${ToolsPhonePixel.getHeightPx(context)}");
+    print("Px ${ToolsPhonePixel.getWidthPx(context)}  ${ToolsPhonePixel.getHeightPx(context)}");
 
     print("Px ${ToolsPhonePixel.getPxInDp(context)}  ");
 
@@ -161,8 +159,7 @@ class _MainActivityState extends State<MainActivity> implements DrawerOnClick {
   Widget _buildPage(int index) {
     return Offstage(
         offstage: this._selectIndex != index,
-        child: TickerMode(
-            enabled: this._selectIndex == index, child: fragmentArray[index]));
+        child: TickerMode(enabled: this._selectIndex == index, child: fragmentArray[index]));
   }
 
   initDrawer() {
@@ -172,8 +169,7 @@ class _MainActivityState extends State<MainActivity> implements DrawerOnClick {
       child: new Column(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.only(
-                top: ToolsPhonePixel.getStatusBarHeight(context)),
+            padding: EdgeInsets.only(top: ToolsPhonePixel.getStatusBarHeight(context)),
           ),
           Container(
             alignment: Alignment.centerRight, //對齊

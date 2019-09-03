@@ -4,6 +4,7 @@ import 'package:duck_flutter/widget/base/BaseStatefulWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:xview/widget/MyMaterialView.dart';
 import 'package:xview/xview.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class TestActivity extends BaseStatefulWidget {
   @override
@@ -15,6 +16,11 @@ class TestActivity extends BaseStatefulWidget {
 class TestActivityState extends BaseState<TestActivity> {
   @override
   Widget build(BuildContext context) {
+    return WebView(
+      initialUrl: "https://pub.dev/packages/webview_flutter/versions",
+      javascriptMode: JavascriptMode.unrestricted,
+    );
+
     return Container(
       constraints: BoxConstraints.expand(),
       decoration: new BoxDecoration(
@@ -62,40 +68,37 @@ class TestActivityState extends BaseState<TestActivity> {
           alignment: Alignment.topCenter,
           overflow: Overflow.visible,
           children: <Widget>[
-            Stack(
-                alignment: Alignment.bottomRight,
-                overflow: Overflow.visible,
-                children: <Widget>[
-                  SizedBox(
-                    width: 200.0,
-                    height: 500.0,
-                    child: Container(
-                      color: Colors.orange,
+            Stack(alignment: Alignment.bottomRight, overflow: Overflow.visible, children: <Widget>[
+              SizedBox(
+                width: 200.0,
+                height: 500.0,
+                child: Container(
+                  color: Colors.orange,
+                ),
+              ),
+              SizedBox(
+                width: 100.0,
+                height: 100.0,
+                child: Container(color: Colors.green),
+              ),
+              Text("Test"),
+              Positioned(
+                top: 30.0,
+                left: 20.0,
+                right: 70.0,
+                bottom: 30,
+                child: Container(
+                  color: Colors.pink,
+                  child: new TextField(
+                    keyboardType: TextInputType.multiline,
+                    maxLines: null,
+                    decoration: new InputDecoration(
+                      hintText: 'Type something',
                     ),
                   ),
-                  SizedBox(
-                    width: 100.0,
-                    height: 100.0,
-                    child: Container(color: Colors.green),
-                  ),
-                  Text("Test"),
-                  Positioned(
-                    top: 30.0,
-                    left: 20.0,
-                    right: 70.0,
-                    bottom: 30,
-                    child: Container(
-                      color: Colors.pink,
-                      child: new TextField(
-                        keyboardType: TextInputType.multiline,
-                        maxLines: null,
-                        decoration: new InputDecoration(
-                          hintText: 'Type something',
-                        ),
-                      ),
-                    ),
-                  )
-                ]),
+                ),
+              )
+            ]),
             ImageRippleView(
               image: Image.asset(
                 "assets/images/ic_share.png",
@@ -120,9 +123,7 @@ class TestActivityState extends BaseState<TestActivity> {
               right: 70.0,
               bottom: 60,
               child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.deepPurpleAccent,
-                  child: Text("asdasdasd")),
+                  alignment: Alignment.center, color: Colors.deepPurpleAccent, child: Text("asdasdasd")),
             ),
             Positioned(
               top: 20,

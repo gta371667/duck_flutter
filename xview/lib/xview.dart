@@ -8,7 +8,7 @@ library xview;
 
 /// https://github.com/gta371667/Xview_flutter
 
-export 'tools/ToolsPhonePixel.dart';
+export 'tools/phone_pixel.dart';
 export 'widget/ImageRippleView.dart';
 export 'widget/MyAttrView.dart';
 export 'widget/MyMaterialView.dart';
