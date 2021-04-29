@@ -21,7 +21,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   dio: 2.0.2
   xview:
-    path: xview/
+    path: xview
 
   webview_flutter: ^0.3.13
 
